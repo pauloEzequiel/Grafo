@@ -1,8 +1,14 @@
+import Estrutura.grafo;
 
 public class aplicacao {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		grafo <String,Integer> g =new grafo<String,Integer>();
+		
+		g.AddVertice("Paulo", 1);
+		g.AddVertice("Paulo", 1);
+		g.AddVertice("Lucas", 1);
 
 	}
 
