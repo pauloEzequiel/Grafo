@@ -9,6 +9,7 @@ public class Vertice<K extends Comparable<? super K>, V> {
 	public Vertice(K label, V val,int index) {
 		Label = label;
 		this.val = val;
+		this.index=index;
 		this.foiVisitado=false;
 	}
 }
