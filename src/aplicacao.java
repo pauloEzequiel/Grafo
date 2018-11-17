@@ -13,9 +13,17 @@ public class aplicacao {
 		
 		g.AddAresta(0, 2, 1);
 		g.AddAresta(0, 1, 1);
-		g.AddAresta(0, 0, 1);
 		
-		g.ExibirAdj(0);
+		g.AddAresta(1, 2, 1);
+		g.AddAresta(1, 0, 5);
+		
+		g.AddAresta(2, 1, 1);
+		g.AddAresta(2, 0, 5);
+		
+		//g.ExibirAdj(9);
+		System.out.println(g.ehConexo(1));
+		
+		//System.out.print(g.ehCompleto());
 		
 
 	}
