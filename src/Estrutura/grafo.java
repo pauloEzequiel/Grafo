@@ -1,13 +1,12 @@
 package Estrutura;
 
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Stack;
 
 public class grafo<K extends Comparable<? super K>, V> {
 
 	private double MatAdj[][];
-	private LinkedList<Vertice<K, V>> vertice;
+    private LinkedList<Vertice<K, V>> vertice;
 	private int nVertice;
 	int Qtd_Max_Vertice = 20;
 	private Stack<Integer> Pilha;
@@ -21,6 +20,12 @@ public class grafo<K extends Comparable<? super K>, V> {
 			for (int j = 0; j < Qtd_Max_Vertice; j++)
 				MatAdj[i][j] = 0;
 		}
+	}
+	
+	public void atualizarV(int index,Object v ){
+		
+		
+		vertice.set(index, (Vertice<K, V>) v);
 	}
 
 	public void AddVertice(K label, V valor) {
@@ -139,6 +144,18 @@ public class grafo<K extends Comparable<? super K>, V> {
 			vertice.get(i).foiVisitado = false;
 
 		return cont == nVertice;
+	}
+
+	public double[][] getMatAdj() {
+		return MatAdj;
+	}
+
+	public LinkedList<Vertice<K, V>> getVertice() {
+		return vertice;
+	}
+
+	public int getnVertice() {
+		return nVertice;
 	}
 
 	

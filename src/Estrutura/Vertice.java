@@ -7,15 +7,19 @@ public class Vertice<K extends Comparable<? super K>, V> {
 	int index;
     boolean foiVisitado;
     int numAdjacente;
+    int colorido;
 	public Vertice(K label, V val,int index) {
 		Label = label;
 		this.val = val;
 		this.index=index;
 		this.foiVisitado=false;
 		this.numAdjacente=0;
+		this.colorido=0; // 0 para descolorido
 	}
 	
 	public void IncNumAdj() {numAdjacente++;}
 		
 	public void DecNumAdj() {numAdjacente--;}
+	
+	public int getNumAdj() {return numAdjacente;}
 }
